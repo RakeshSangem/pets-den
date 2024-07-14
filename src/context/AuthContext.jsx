@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", email);
       setUser(email);
     } else {
-      throw new Error("Invalid credentials");
+      throw new Error("Invalid email or password!");
     }
   };
 

@@ -24,7 +24,7 @@ export default function Login() {
       await login(data.email, data.password);
       navigate("/pets");
     } catch (error) {
-      console.error("Failed to login", error);
+      alert("Failed to login", error);
     }
   };
 

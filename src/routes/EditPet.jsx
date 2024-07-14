@@ -46,7 +46,7 @@ export default function EditPet() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="container mx-auto mt-8 max-w-screen-lg">
+    <div className="container mx-auto mt-8 max-w-screen-lg pb-20">
       <h2 className="text-2xl font-bold mb-4">Edit Pet</h2>
       {isLoading ? (
         <div>Loading...</div>

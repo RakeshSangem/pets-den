@@ -1,21 +1,20 @@
+import axios from "axios";
 import { API_BASE_URL } from "../../constants";
 import Form from "../components/Form";
 
 export default function AddPet() {
   const onFormSubmit = async (data) => {
-    const res = await fetch(`${API_BASE_URL}/pets`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data), // Corrected
-    });
-    if (res.ok) {
-      const responseJson = await res.json();
-      alert("Pet added successfully!"); // Display a success message
-      console.log(responseJson); // Log the response JSON
-    } else {
-      alert("Failed to add pet."); // Handle error case
+    try {
+      const res = await axios.post(`${API_BASE_URL}/pets`, data);
+      if (res.status === 201) {
+        alert("Pet added successfully!");
+        console.log(res.data);
+      } else {
+        alert("Failed to add pet. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error adding pet:", error);
+      alert("An error occurred while adding the pet. Please try again.");
     }
   };
 

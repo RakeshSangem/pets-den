@@ -9,7 +9,7 @@ const Form = ({ onSubmit, defaultValues }) => {
     control,
     formState: { errors },
   } = useForm({
-    defaultValues: defaultValues, // Optional: If editing, provide default values
+    defaultValues: defaultValues,
   });
 
   return (

@@ -1,0 +1,81 @@
+[
+  {
+    "type": "text",
+    "label": "Pet Name",
+    "name": "petName",
+    "placeholder": "Enter pet's name",
+    "validation": {
+      "required": "Pet name is required"
+    }
+  },
+  {
+    "type": "email",
+    "label": "Pet Owner Email",
+    "name": "ownerEmail",
+    "placeholder": "Enter pet owner's email",
+    "validation": {
+      "required": "Owner's email is required",
+      "pattern": {
+        "value": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$",
+        "message": "Enter a valid email address"
+      }
+    }
+  },
+  {
+    "type": "tel",
+    "label": "Pet Owner Phone",
+    "name": "ownerPhone",
+    "placeholder": "Enter pet owner's phone number",
+    "validation": {
+      "required": "Owner's phone number is required"
+    }
+  },
+  {
+    "type": "date",
+    "label": "Date of Birth",
+    "name": "dob",
+    "validation": {
+      "required": "Date of birth is required"
+    }
+  },
+  {
+    "type": "select",
+    "label": "Gender",
+    "name": "gender",
+    "options": [
+      {
+        "label": "Male",
+        "value": "male"
+      },
+      {
+        "label": "Female",
+        "value": "female"
+      },
+      {
+        "label": "Non-binary",
+        "value": "non-binary"
+      }
+    ],
+    "validation": {
+      "required": "Please select a gender"
+    }
+  },
+  {
+    "type": "radio",
+    "label": "Adoption Status",
+    "name": "adoptionStatus",
+    "options": [
+      {
+        "label": "Adopted",
+        "value": "adopted"
+      },
+      {
+        "label": "Not Adopted",
+        "value": "not-adopted"
+      }
+    ],
+    "validation": {
+      "required": "Please select adoption status"
+    }
+  }
+]
